@@ -37,12 +37,7 @@ class Pong
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
 
-            DrawLeftRacket();
-            DrawRightRacket();
-            DrawBall();
-            DrawScore();
-
-            BallHittingRackets();
+            IsGameOver();
 
             Raylib.EndDrawing();
         }
@@ -200,6 +195,29 @@ class Pong
             if (!(ballY <= rightRacketY || ballY >= rightRacketY + rightRacketCollisionY))
             {
                 BallIsGoingRight = false;
+            }
+        }
+    }
+
+    // Methods 4 - Shaping the Champion //
+    static void IsGameOver() {
+        if (leftPlayerScore < 10 && rightPlayerScore < 10)
+        {
+            DrawLeftRacket();
+            DrawRightRacket();
+            DrawBall();
+            DrawScore();
+            BallHittingRackets();
+        }
+        else
+        {
+            if (leftPlayerScore >= 10)
+            {
+                Raylib.DrawText("Player 2 Wins!", windowLength / 2 - 75, windowHeigth / 2, 20, Color.DarkBlue);
+            }
+            else if (rightPlayerScore >= 10)
+            {
+                Raylib.DrawText("Player 1 Wins!", windowLength / 2 - 75, windowHeigth / 2, 20, Color.Red);
             }
         }
     }
