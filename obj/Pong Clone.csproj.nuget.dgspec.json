@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong Clone.csproj": {}
+  },
+  "projects": {
+    "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong Clone.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong Clone.csproj",
+        "projectName": "Pong Clone",
+        "projectPath": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong Clone.csproj",
+        "packagesPath": "/home/kitsunehearts/.nuget/packages/",
+        "outputPath": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kitsunehearts/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Raylib-cs": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
