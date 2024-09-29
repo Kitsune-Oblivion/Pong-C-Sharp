@@ -131,11 +131,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong Clone.csproj",
+      "projectUniqueName": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong-C-Sharp/Pong Clone.csproj",
       "projectName": "Pong Clone",
-      "projectPath": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong Clone.csproj",
+      "projectPath": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong-C-Sharp/Pong Clone.csproj",
       "packagesPath": "/home/kitsunehearts/.nuget/packages/",
-      "outputPath": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/obj/",
+      "outputPath": "/home/kitsunehearts/Programação/VsCode/C#/Pong Clone/Pong-C-Sharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kitsunehearts/.nuget/NuGet/NuGet.Config"

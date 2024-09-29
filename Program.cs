@@ -23,6 +23,8 @@ class Pong
     // variables 3 //
     static int leftPlayerScore = 0;
     static int rightPlayerScore = 0;
+    static double leftRacketCollisionY = racketHeight % Math.Round(leftRacketY);
+    static double rightRacketCollisionY = racketHeight % Math.Round(rightRacketY);
 
 
     // main method //
@@ -40,6 +42,8 @@ class Pong
             DrawBall();
             DrawScore();
 
+            BallHittingRackets();
+
             Raylib.EndDrawing();
         }
 
@@ -56,7 +60,6 @@ class Pong
     static void DrawRightRacket()
     {
         MoveRightRacketY();
-        
         Raylib.DrawRectangle((int)(windowLength * 0.95), (int) rightRacketY, racketWidth, racketHeight, Color.Red);
     }
 
@@ -105,8 +108,6 @@ class Pong
 
     static void MoveBallX() 
     {
-        BallHittingRackets();
-
         if (BallIsGoingRight)
         {
             BallsXLimit();
@@ -173,12 +174,12 @@ class Pong
 
     static void BallsXLimit()
     {
-        if (ballX < 0)
+        if (ballX <= racketWidth)
         {
             rightPlayerScore++;
             ResetBallPosition();
         }
-        else if (ballX > 800)
+        else if (ballX >= windowLength - racketWidth)
         {
             leftPlayerScore++;
             ResetBallPosition();
@@ -187,14 +188,19 @@ class Pong
 
     static void BallHittingRackets()
     {
-        if (ballX <= windowLength * 0.02 + racketWidth || ballX >= windowLength * 0.98 - racketWidth)
+        if (ballX <= windowLength * 0.05)
         {
-            if (ballY <= leftRacketY|| ballY >= leftRacketY + racketHeight * 0.25 
-            || ballY <= rightRacketY || ballY >= rightRacketY + racketHeight * 0.25)
+            if (!(ballY <= leftRacketY || ballY >= leftRacketY + leftRacketCollisionY))
             {
-                BallIsGoingRight = !BallIsGoingRight;
+                BallIsGoingRight = true;
+            }
+        }
+        else if (ballX >= windowLength * 0.95)
+        {
+            if (!(ballY <= rightRacketY || ballY >= rightRacketY + rightRacketCollisionY))
+            {
+                BallIsGoingRight = false;
             }
         }
     }
-
 }
